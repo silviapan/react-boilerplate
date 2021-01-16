@@ -19,5 +19,13 @@
   "rules": {
     "prettier/prettier": "error",
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
-  }
+  },
+  "overrides": [
+    {
+      "files": ["dist/**"],
+      "rules": {
+        "strict": "off"
+      }
+    }
+  ]
 }
