@@ -1,6 +1,10 @@
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 
 module.exports = {
+  mode: 'development',
+  devServer: {
+    contentBase: './dist'
+  },
   module: {
     rules: [
       {
@@ -29,6 +33,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebPackPlugin({
+      title: 'Development',
       template: './src/index.html',
       filename: './index.html',
     }),
